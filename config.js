@@ -1,9 +1,9 @@
 const config = {
   host : "localhost",
-  port : 3000,
+  port : 3306,
   user : "root",
-  password : "root",
-  database : "db_videomovies"
+  password : "",
+  database : "db_cmsmovies"
 }
 
 module.exports = config;
