@@ -6,6 +6,7 @@ body {
   color: white;
 }
 
+.bump-down { padding-top: 80px; }
 a {
   color: #00B7FF;
   text-decoration: none;
