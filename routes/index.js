@@ -21,4 +21,16 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/adults', function(req, res, next){
+res.render("movies");
+
+});
+
+router.get('/kidsmovies', function(req, res, next){
+res.render("kids");
+
+});
+
+
+
 module.exports = router;
