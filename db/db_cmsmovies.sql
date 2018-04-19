@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 18, 2018 at 08:34 PM
+-- Generation Time: Apr 19, 2018 at 04:28 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -21,6 +21,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_cmsmovies`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_comments`
+--
+
+DROP TABLE IF EXISTS `tbl_comments`;
+CREATE TABLE IF NOT EXISTS `tbl_comments` (
+  `user_comment` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -105,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `tbl_name` (
   `movie_name` varchar(75) NOT NULL,
   `movie_description` varchar(500) NOT NULL,
   `movie_thumbnail` varchar(250) NOT NULL DEFAULT 'moviethumbnaildefault.jpg',
-  `tbl_trailers` varchar(150) NOT NULL,
+  `movie_trailers` varchar(150) NOT NULL,
   `movie_year` varchar(20) NOT NULL,
   `movie_runtime` varchar(25) NOT NULL,
   `movie_releasedate` varchar(20) NOT NULL,
@@ -116,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `tbl_name` (
 -- Dumping data for table `tbl_name`
 --
 
-INSERT INTO `tbl_name` (`movie_id`, `movie_name`, `movie_description`, `movie_thumbnail`, `tbl_trailers`, `movie_year`, `movie_runtime`, `movie_releasedate`) VALUES
+INSERT INTO `tbl_name` (`movie_id`, `movie_name`, `movie_description`, `movie_thumbnail`, `movie_trailers`, `movie_year`, `movie_runtime`, `movie_releasedate`) VALUES
 (1, 'Avengers: Infinity War', 'The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.', 'infinitywar.jpg', 'infinitywar.mp4', '2018', '2 Hrs 36 m', 'April, 26th, 2018'),
 (2, 'Ready Player One', 'When the creator of a virtual reality world called the OASIS dies, he releases a video in which he challenges all OASIS users to find his Easter Egg, which will give the finder his fortune.', 'readyplayerone.jpg', 'readyplayerone.mp4', '2018', '2Hr 20m', 'March 28th, 2018'),
 (3, 'Tomb Raider', 'Lara Croft, the fiercely independent daughter of a missing adventurer, must push herself beyond her limits when she finds herself on the island where her father disappeared.', 'tombraider.jpg', 'tombraider.mp4', '2018', '1h 58min', 'March 14th, 2018'),
@@ -144,6 +155,18 @@ INSERT INTO `tbl_name` (`movie_id`, `movie_name`, `movie_description`, `movie_th
 (25, 'se7en', 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.', 'se7en.jpg', 'se7en.mp4', '1996', '2h 7min', 'January 5th, 1996'),
 (26, 'beavertail2.jpg', 'test', '', '', '', '', ''),
 (27, 'cosmos.jpg', 'Cosmos', '2018', '', '2h 27min', 'Journey Through the stars', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_rating`
+--
+
+DROP TABLE IF EXISTS `tbl_rating`;
+CREATE TABLE IF NOT EXISTS `tbl_rating` (
+  `negative_rating` tinyint(8) NOT NULL,
+  `positive_rating` tinyint(8) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
