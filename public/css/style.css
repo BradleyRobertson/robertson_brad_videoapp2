@@ -1,4 +1,4 @@
-* { border: 0; padding: 0; margin: 0; }
+* { border: 0; padding: 0; margin: 0;}
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -13,14 +13,19 @@ height: 100%;
 }
 
 .bump-down {
-   padding-top: 80px;
+   padding-top: 35px;
    font-size: 35px;
    text-align: center;
+font-style: italic;
+font-family: 'Anton', sans-serif;
   }
 
   .description-page {
     text-align: center;
-    font-size: 14px;
+    font-size: 19px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-family: 'Gothic A1', sans-serif;
   }
 
   .pages{
@@ -67,7 +72,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005cad', end
 }
 
 .options {
-  padding-top: 75px;
+  padding-top: 40px;
   /* For some reason this isn't quite working...
 display: inline-block;
 */
@@ -78,7 +83,7 @@ font-family: 'Archivo Black', sans-serif;
 }
 
 .options li {
-  padding: 10px 30px;
+  padding: 3px 3px;
 }
 
 .adults {
@@ -98,6 +103,7 @@ font-family: 'Archivo Black', sans-serif;
   text-align: center;
   margin-right: 35px;
   padding-top: 100px;
+  padding-bottom: 10px;
   font-family: 'Shrikhand', cursive;
 }
 
