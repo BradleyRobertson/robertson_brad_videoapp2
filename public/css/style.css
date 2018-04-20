@@ -6,6 +6,21 @@ body {
   color: white;
 }
 
+.bump-down {
+   padding-top: 80px;
+   font-size: 35px;
+   text-align: center;
+  }
+
+  .description-page {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .pages{
+    background-color: #222323;
+  }
+
 a {
   color: #00B7FF;
   text-decoration: none;
@@ -112,6 +127,10 @@ nav ul li {
   font-size: 1.25em;
   padding: 0 0.2em;
   cursor: pointer;
+}
+
+#Headings{
+  text-align: center;
 }
 
 footer {
