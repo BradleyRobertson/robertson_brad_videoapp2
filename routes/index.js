@@ -7,7 +7,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  console.log('load splash');
+  console.log('working fine');
   // connect.query(`SELECT * FROM tbl_name m, tbl_genre g, tbl_mov_genre mg WHERE m.movie_id = mg.movie_id AND g.genre_id = mg.genre_id`, (error, rows)=> {
   //   if (error) {
   //     console.log(error);
@@ -32,6 +32,15 @@ res.render("kids");
 
 });
 
+var express = require('express');
+var videoController = require('../controllers/videoAppController');
+var router = express.Router();
 
+/* GET home page. */
+router.get('/', videoController.get_all_movies);
+
+router.get('/movies/:id/:movie', videoController.get_one_movie );
+
+router.post('/api', videoController.post_new_review);
 
 module.exports = router;

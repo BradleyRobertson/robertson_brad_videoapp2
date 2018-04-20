@@ -1,7 +1,5 @@
 const myApp = {
   // some non-VM functionality would go here
-
-
   vm : new Vue({
     el : "#app",
 
@@ -16,6 +14,7 @@ const myApp = {
     delimiters : ["${", "}"]
   })
 }
+
 /*
 const vm = new Vue({
   el : "#app",
