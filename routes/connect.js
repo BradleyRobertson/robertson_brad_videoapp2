@@ -20,4 +20,21 @@ console.query('SELECT * FROM db_cmsmovies', (err,  result) => {
 });
 });
 
+router.get('/', function(req, res, next) {
+console.query('SELECT * FROM db_cmsmovies', (err,  result) => {
+  console.log('selecting movies');
+  if(err){
+    throw err; console.log(err);
+  }else{
+    console.log(result);
+
+    res.render('movies', {
+      title: 'kids files',
+      message: "The kids section",
+      filmData : result
+    });
+  }
+});
+});
+
 module.exports = router;
