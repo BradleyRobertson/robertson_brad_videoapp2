@@ -42,6 +42,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005cad', end
     width: 100%;
 }
 
+.back-button{
+  padding-top: 50px;
+  display: inline-block;
+  color: white;
+  data-size: 15%;
+}
+
 .mainheader{
   background-image: url("/images/banner.jpg");
   color: whtee;
@@ -144,6 +151,11 @@ nav ul li {
 footer {
   background-color: #131519;
   padding: 2em 1em;
+}
+
+.genre-lists{
+  padding-top: 25px;
+  display: inline-block;
 }
 
 footer ul { list-style-type: none;

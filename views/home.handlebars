@@ -1,7 +1,8 @@
 {{!-- <section id="app">
   <h1>${ message }</h1>
 </section> --}}
-<!--<section class="mainheader">
+
+<section class="mainheader">
 	<h2> Welcome To Flashback Videos! </h2>
 	<ul class="options">
 		<a class="adults" href="/adults">
@@ -12,7 +13,10 @@
 				<li class="kids"> kids </li>
 			 </a>
 	</ul>
-</section> -->
+</section>
+
+<!--
+
 <section id="app">
   <div class="movie-wrapper">
     <aside>
@@ -27,12 +31,12 @@
       <source src="video/{{ defaultMovie.movies_trailer }}" type="video/mp4">
     </video>
   </div>
-
+-->
   <!-- load in all of the thumnails for each genre -->
   <section class="genre-lists" v-for="genre in genres">
     <div v-if="genre.movies.length > 0">
       <div class="genre-item">
-        <h6 class="genre-name">${ genre.name }</h6>
+        <h6 class="genre-name">{{ defaultMovie.genre_name }}</h6>
         <div class="movie-list" v-for="movie in genre.movies">
           <a :href="'/movies/' + movie.movies_id + '/' + movie.movies_trailer">
             <img class="movie-thumb" :src="'images/' + movie.movies_cover" :alt="movie.movies_title">
