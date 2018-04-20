@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-console.query('SELECT * FROM db_cmsmovies', (err,  result) => {
+console.query('SELECT * FROM movies', (err,  result) => {
   console.log('selecting movies');
   if(err){
     throw err; console.log(err);
@@ -21,7 +21,7 @@ console.query('SELECT * FROM db_cmsmovies', (err,  result) => {
 });
 
 router.get('/', function(req, res, next) {
-console.query('SELECT * FROM db_cmsmovies', (err,  result) => {
+console.query('SELECT * FROM movies', (err,  result) => {
   console.log('selecting movies');
   if(err){
     throw err; console.log(err);

@@ -3,7 +3,7 @@ const config = {
   port : 3306,
   user : "root",
   password : "",
-  database : "db_cmsmovies"
+  database : "movies"
 }
 
 module.exports = config;
