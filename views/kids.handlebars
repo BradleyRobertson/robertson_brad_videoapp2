@@ -21,7 +21,8 @@ Welcome to the adults secton of Flashback Videos
 </p>
 </section>
 
-<section>
-  <h3 class="movie-title">{{ videotitle }}</h3>
-    <h3 class="movie-details">{{ videoDescription }}</h3>
-</section>
+{{#each  allMovies}}
+<a href="/movies/{{movies_id}}/{{movies_trailer}}">
+  <img src="images/{{movies_cover}}" alt="defaultmovies" class="mainMovies">
+</a>
+{{/each}}
