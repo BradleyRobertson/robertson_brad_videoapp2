@@ -1,6 +1,10 @@
 // handle the routing requests => the request gets passed in via the route
 const connect = require('../utils/sqlConnect');
 
+exports.showLandingPage = (req, res) => {
+  res.render('home', { videopage : false});
+}
+
 exports.get_all_movies = (req, res) => {
   console.log('hit get all movies');
 
@@ -20,10 +24,9 @@ exports.get_all_movies = (req, res) => {
 
       console.log(rows);
 
-      res.render('home', {
+      res.render('movies', {
           defaultMovie : rows[Math.floor(Math.random() * rows.length)],
-          data : JSON.stringify(rows),
-          mainpage : true,
+          allMovies : rows,
           videopage : false
       });
     })

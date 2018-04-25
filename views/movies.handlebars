@@ -1,16 +1,3 @@
-<!--<ul>
-  <li v-for="movie in videodata">
-    <a :href="movie.vidsource" v-on:click="loadMovie">
-<img :src="'images/' + movie.thumb" alt="movie thumbnail">
-</a>
-  </li>
-</ul>
-  <section>
-  <h3 class="movie-title">{{ videotitle }}</h3>
-    <h3 class="movie-details">{{ videoDescription }}</h3>
-</section> -->
-
-
 <section class="pages">
     <a href="/" class="back-button">
       <i class="far fa-arrow-alt-circle-left"></i>
@@ -21,7 +8,13 @@ Welcome to the adults section, here you'll find all the movies sutable for adult
 </p>
 </section>
 
-<section>
+{{#each  allMovies}}
+<a href="/movies/{{movies_id}}/{{movies_trailer}}">
+  <img src="images/{{movies_cover}}" alt="defaultmovies" class="mainMovies">
+</a>
+{{/each}}
+
+<!--<section>
   <h3 class="movie-title">{{ videotitle }}</h3>
     <h3 class="movie-details">{{ videoDescription }}</h3>
-</section>
+</section> -->

@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/scss" href="css/comments.scss">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/scss" href="/css/comments.scss">
 	<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
@@ -14,7 +14,7 @@
 </head>
 <body>
 	<header>
-		<img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
+		<img src="/images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
 		<nav>
 			<ul>
 				<li>Kids</li>
@@ -49,6 +49,15 @@
 			</li>
 		</ul>
 	</footer>
-  <script src="js/main.js"></script>
+
+	<script type="text/javascript">
+var appData = {
+	movies : {{{ data }}}
+}
+	</script>
+
+{{#if videopage }}
+  <script src="/js/main.js"></script>
+	{{/if }}
 </body>
 </html>
